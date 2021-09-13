@@ -12,7 +12,7 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("product", "m-5", "py-3");
+    div.classList.add("product", "m-3", "py-3");
     div.innerHTML = `
     <div class="single-product m-1 py-5 card-color w-100">
         <div >
@@ -25,11 +25,12 @@ const showProducts = (products) => {
           <p class='fs-3'>Category : ${product.category}</p>
           <p class="fs-3">Ratings : ( ${product.rating.rate} )</p>
           <p class="fs-3">Reviews by : ${product.rating.count}</p>
-          <h2 class='mb-3'>Price : $ ${product.price}</h2>
+          <h2 class='mb-3 text-info'>Price : $ ${product.price}</h2>
         </div>
        <div class= 'card-btn '>
-          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-primary fs-4">add to cart</button>
-          <button id="details-btn" class="btn btn-outline-dark fs-4">Details</button>
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary btn-lg p-3 fs-4">Add to cart</button>
+          <button id="details-btn" class="btn btn-outline-info  btn-lg
+          p-3 fs-4">Details</button>
         </div>
     </div>`;
     document.getElementById("all-products").appendChild(div);
@@ -42,6 +43,7 @@ const addToCart = (id, price) => {
 
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
+  updateTotal();
 };
 
 const getInputValue = (id) => {
@@ -86,5 +88,6 @@ const updateTotal = () => {
     getInputValue("price") +
     getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+  document.getElementById("total").innerText =
+    parseFloat(grandTotal).toFixed(2);
 };
