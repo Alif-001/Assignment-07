@@ -27,7 +27,7 @@ body {
 /* card color from app.js */
 .card-color{
   /* background-color: #def5f5ec; */
-  background-color: #6eddff0c;
+  background-color: hsla(197, 100%, 49%, 0.041);
   border: 1px  solid rgba(177, 176, 176, 0.685);
   border-radius: 5px;
 }
