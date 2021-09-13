@@ -6,29 +6,7 @@ body {
 #title{
   font-size: 50px;
 }
-/* .search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
-}
-.search-field:hover {
-  outline: none;
-  border: none;
-}
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
-}
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
-} */
+/* all product layout  */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,16 +19,19 @@ body {
   justify-content: center;
   align-items: stretch
 }
+/* product from app.js */
 .product{
   display: flex;
   flex-wrap: wrap;
 }
+/* card color from app.js */
 .card-color{
   /* background-color: #def5f5ec; */
-  background-color: #b4dbff21;
+  background-color: #6eddff0c;
   border: 1px  solid rgba(177, 176, 176, 0.685);
   border-radius: 5px;
 }
+/* from app.js */
 .card-img-color{
   background-color: rgb(255, 255, 255);
   height: 200px;
@@ -60,6 +41,8 @@ body {
 .card-img-color img{
   margin-top: 25px;
 }
+
+/* from app.js  */
 .card-btn{
   margin-top: auto;
   padding: 10px 20px;
@@ -96,6 +79,10 @@ body {
   padding-right: 30px;
   
 }
+
+/*---------------
+               media query 
+                        ------------ */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
