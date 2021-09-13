@@ -6,7 +6,7 @@ body {
 #title{
   font-size: 50px;
 }
-/* all product layout  */
+/* all products layout  */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
